@@ -1,0 +1,73 @@
+<html>
+<head>
+<style>
+h3{color:red;text-decoration:underline;text-shadow:2px 2px 3px blue;text-align:center;}
+table{background-color:blueviolet;}
+</style>
+</head>
+
+<body>
+    <center>
+        <h3> Restaurant Bill</h3>
+<form method="POST" name="shopform" action="insert.php" onsubmit="return validate()">
+ <table>
+ <tr>
+ <td>Item ID</td>
+ <td><input type="text" name="id"></td>
+ </tr>
+
+ <tr>
+ <td>Name</td>
+ <td><input type="text" name="name" required=""></td>
+ </tr>
+
+ <tr>
+ <td>Type</td>
+ <td><input type="text" name="type" required=""></td>
+ </tr>
+ <tr>
+    <td>Quantity</td>
+    <td><input type="text" name="quantity" required=""></td>
+    </tr>
+   
+    <tr>
+    <td>Price</td>
+    <td><input type="text" name="price" required=""></td>
+    </tr>
+    <tr>
+        <td><input type="submit" name="submit" value="submit"></td>
+    </tr>
+</form>
+</center>
+ <form method="POST" action="select.php">
+ <tr>
+ <td><input type="submit" value="show"></td>
+ </tr>
+
+ 
+ </table>
+ </form>
+
+ <script type="text/javascript">
+    function validate()
+    {
+        var shop=document.shopform
+        if(shop.id.value =="")
+        {
+            alert("please enter id");
+            shop.id.focus()
+            return false;
+        }
+        else if(shop.name.value=="")
+        {
+            alert("please enter name")
+            shop.id.focus()
+            return false;
+      
+        }
+        
+
+    }
+  </script>
+  </body>
+  </html>
